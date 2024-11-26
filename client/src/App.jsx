@@ -5,12 +5,14 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
+import Header from './components/Header';
 
 // here we utilize the react router dom imports to be able to route to our pages
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/about" element={ <About /> } />

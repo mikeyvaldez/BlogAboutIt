@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 // here we utilize the react router dom imports to be able to route to our pages
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/dashboard" element={ <Dashboard /> } />
         <Route path="/projects" element={ <Projects /> } />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

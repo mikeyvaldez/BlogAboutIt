@@ -1,6 +1,6 @@
 import { Footer } from "flowbite-react";
 import { Link } from "react-router-dom";
-import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function FooterComponent() {
   return (
@@ -80,8 +80,7 @@ export default function FooterComponent() {
             by="Blog About It!"
             year={new Date().getFullYear()}
           />
-          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">            
-            <Footer.Icon href="#" icon={BsInstagram} />
+          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">                        
             <Footer.Icon href="https://github.com/mikeyvaldez" icon={BsGithub} />
             <Footer.Icon href="https://www.linkedin.com/in/michael-valdez-a29179260/" icon={BsLinkedin} />
             

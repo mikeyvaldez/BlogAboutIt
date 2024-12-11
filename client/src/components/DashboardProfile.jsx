@@ -16,8 +16,7 @@ export default function DashboardProfile() {
   const [imageFile, setImageFile] = useState(null);
   const [imageFileUrl, setImageFileUrl] = useState(null);
   const [imageFileUploadProgress, setImageFileUploadProgress] = useState(null);
-  const [imageFileUploadError, setImageFileUploadError] = useState(null);
-  console.log(imageFileUploadProgress, imageFileUploadError);
+  const [imageFileUploadError, setImageFileUploadError] = useState(null);  
   const filePickerRef = useRef();
 
   const handleImageChange = (e) => {
@@ -44,6 +43,9 @@ export default function DashboardProfile() {
     //       request.resource.contentType.matches('image/.*')
     //     }
     //   }
+    setImageFileUploadError(null);
+    setImageFile(null);
+    setImageFileUrl(null);
     const storage = getStorage(app);
     const fileName = new Date().getTime() + imageFile.name;
     const storageRef = ref(storage, fileName);
@@ -59,6 +61,7 @@ export default function DashboardProfile() {
         setImageFileUploadError(
           "Could not upload image (File must be less than 3MB)"
         );
+        setImageFileUploadProgress(null);
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -105,7 +108,8 @@ export default function DashboardProfile() {
           <img
             src={imageFileUrl || currentUser.profilePicture}
             alt="user"
-            className="rounded-full w-full h-full object-cover border-8 border-[darkgray]"
+            className={`rounded-full w-full h-full object-cover border-8 border-[darkgray]
+               ${imageFileUploadProgress && imageFileUploadProgress < 100 && "opacity-60"}`}
           />
         </div>
         {imageFileUploadError && (

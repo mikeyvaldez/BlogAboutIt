@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
 import OnlyAdminPrivRoute from './components/OnlyAdminPrivRoute';
 import CreatePost from './pages/CreatePost';
+import UpdatePost from './pages/UpdatePost';
 
 // here we utilize the react router dom imports to be able to route to our pages
 
@@ -27,6 +28,7 @@ export default function App() {
         </Route>
         <Route element={<OnlyAdminPrivRoute />}>
           <Route path="/create-post" element={<CreatePost />}/>
+          <Route path="/update-post/:postId" element={<UpdatePost />}/>
         </Route>
         <Route path="/projects" element={ <Projects /> } />
       </Routes>

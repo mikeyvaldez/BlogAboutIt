@@ -12,12 +12,14 @@ import OnlyAdminPrivRoute from './components/OnlyAdminPrivRoute';
 import CreatePost from './pages/CreatePost';
 import UpdatePost from './pages/UpdatePost';
 import PostPage from './pages/PostPage';
+import ScrollToTop from './components/ScrolToTop';
 
 // here we utilize the react router dom imports to be able to route to our pages
 
 export default function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={ <Home /> } />

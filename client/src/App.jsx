@@ -13,6 +13,7 @@ import CreatePost from './pages/CreatePost';
 import UpdatePost from './pages/UpdatePost';
 import PostPage from './pages/PostPage';
 import ScrollToTop from './components/ScrolToTop';
+import Search from './pages/Search';
 
 // here we utilize the react router dom imports to be able to route to our pages
 
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/about" element={ <About /> } />
         <Route path="/sign-in" element={ <SignIn /> } />
         <Route path="/sign-up" element={ <SignUp /> } />
+        <Route path="/search" element={ <Search /> } />
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={ <Dashboard /> } />
         </Route>

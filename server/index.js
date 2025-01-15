@@ -14,7 +14,7 @@ app.use(cookieParser()); // this will allow us to extract the cookie from the br
 dotenv.config({ path: "../.env" });
 
 const mongo_url = process.env.MONGO;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 mongoose
   .connect(mongo_url)
@@ -25,7 +25,7 @@ mongoose
     console.log(err);
   });
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log(`Server is running on port ${port}`);
 });
 

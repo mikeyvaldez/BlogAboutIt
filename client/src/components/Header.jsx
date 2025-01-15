@@ -56,7 +56,7 @@ export default function Header() {
     <Navbar className="border-b-2">
       {/* Link component from flowbite*/}
       <Link to="/" className="self-center text-sm sm:text-xl font-bold">
-        <span className="px-2 py-1 bg-green-400 rounded-lg text-white">
+        <span className="px-2 py-1 rounded-lg text-green-500">
           Blog About It!
         </span>
       </Link>
@@ -77,7 +77,7 @@ export default function Header() {
       </Button>
       <div className="flex gap-2 md:order-2">
         <Button
-          gradientDuoTone="greenToBlue"
+          color="green"
           className="w-12 h-10 hidden sm:inline"
           pill
           onClick={() => dispatch(toggleTheme())}
@@ -91,20 +91,20 @@ export default function Header() {
             label={<Avatar alt="user" img={currentUser.profilePicture} rounded/>}
           >
             <Dropdown.Header>
-              <span className="block text-sm">@{currentUser.username}</span>
+              <span className="block text-sm">Username: {currentUser.username}</span>
               <span className="block text-sm font-medium truncate">
-                {currentUser.email}
+                Email: {currentUser.email}
               </span>
             </Dropdown.Header>
             <Link to={"/dashboard?tab=profile"}>
               <Dropdown.Item>Profile</Dropdown.Item>
             </Link>
             <Dropdown.Divider />
-            <Dropdown.Item onClick={handleSignout} >Sign Out</Dropdown.Item>
+            <Dropdown.Item onClick={handleSignout}>Sign Out</Dropdown.Item>
           </Dropdown>
         ) : (
           <Link to="/sign-in">
-            <Button gradientDuoTone="greenToBlue" outline>
+            <Button color="green" outline>
               Sign In
             </Button>
           </Link>
@@ -119,9 +119,7 @@ export default function Header() {
         <Navbar.Link active={path === "/about"} as={"div"}>
           <Link to="/about">About</Link>
         </Navbar.Link>
-        <Navbar.Link active={path === "/projects"} as={"div"}>
-          <Link to="/projects">Projects</Link>
-        </Navbar.Link>
+        
       </Navbar.Collapse>
     </Navbar>
   );

@@ -2,7 +2,7 @@ import { Button } from "flowbite-react";
 
 export default function CallToAction() {
   return (
-    <div className="flex flex-col sm:flex-row p-3 border justify-center items-center rounded-tl-3xl rounded-br-3xl text-center">
+    <div className="flex flex-col sm:flex-row p-3 border justify-center items-center rounded-tl-3xl rounded-br-3xl px-2 text-center">
       <div className="flex-1 justify-center flex flex-col p-7">
         <h2 className="text-2xl mb-2 ">Want to start blogging? Create a profile!</h2>
         <Button className="rounded-tl-xl rounded-bl-none" color="blue">
@@ -11,9 +11,6 @@ export default function CallToAction() {
           </a>
         </Button>
       </div>
-      {/* <div className="p-7 flex-1">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZq_FDxj8jleGCeDXaWUdeuD1XGtvc2wG0Vg&s" />
-      </div> */}
     </div>
   );
 }

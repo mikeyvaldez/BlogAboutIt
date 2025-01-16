@@ -20,18 +20,12 @@ export default function Home() {
     <div>
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
         <h1 className="text-3xl font-mono lg:text-6xl">
-          Welcome to BlogAboutIt!
+          Welcome to Blog About It!
         </h1>
         <p className="text-gray-500 text-xs sm:text-sm">
           Here you can create your own blog. If you would like to start blogging
           go ahead and create a profile!
-        </p>
-        <Link
-          to="/sign-up"
-          className="text-xs sm:text-sm text-whitefont-bold hover:text-green-300 hover:underline"
-        >
-          Sign Up
-        </Link>
+        </p>        
       </div>
       <div className="max-w-2xl mx-auto bg-amber-100 dark:bg-slate-700 rounded-tl-3xl rounded-br-3xl">
         <CallToAction />
